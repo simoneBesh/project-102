@@ -11,9 +11,9 @@ for item in list_of_files:
     if ext == "":
         continue
     elif ext in ['.txt', '.doc', '.docx', '.pdf', '.JPG', '.jpeg']:
-        path1 = from_dir + '/' + name
+        path1 = from_dir + '/' + item
         path2 = to_dir + '/' + 'document_files'
-        path3 = to_dir + '/' + 'document_files' + '/' + name
+        path3 = to_dir + '/' + 'document_files' + '/' + item
         if os.path.exists(path2):
             print('moving ', name, '.....')
             shutil.move(path1, path3)
